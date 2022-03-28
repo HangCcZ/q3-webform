@@ -36,12 +36,10 @@ export default async function handler(req, res) {
       if (calculusExist) {
         try {
           const newChoices = await Choices.create(req, req.body)
-          res
-            .status(201)
-            .json({
-              success: true,
-              message: 'Just Webform successfully submitted',
-            })
+          res.status(201).json({
+            success: true,
+            message: 'Just Webform successfully submitted',
+          })
         } catch (error) {
           res.status(400).json({ success: false, message: error })
         }

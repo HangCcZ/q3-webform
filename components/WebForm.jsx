@@ -9,7 +9,6 @@ export default function WebForm({ notify }) {
   const [choiceB, setChoiceB] = useState('')
   const [choiceC, setChoiceC] = useState('')
   const [calculusExist, setCalculusExist] = useState(false)
-
   const isCalculusInChoice = () => {
     const choicesVal = [choiceA, choiceB, choiceC]
     for (let i = 0; i < courseMax; i++) {
@@ -19,7 +18,7 @@ export default function WebForm({ notify }) {
     }
     return false
   }
-
+  console.log(HOST)
   const handleChoiceA = (event) => {
     setChoiceA((currentVal) => event.target.value)
   }
