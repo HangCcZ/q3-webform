@@ -108,12 +108,32 @@ export default function WebForm({ notify }) {
           </label>
         </div>
         <div className="h-5 text-red-500">
-          {calculusExist ? null : 'One of the choices has to be calculus'}
+          {calculusExist ? null : (
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="inline h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                />
+              </svg>
+              One of the choices has to be calculus
+            </span>
+          )}
         </div>
         <div className=" w-full">
           <button
             type="submit"
-            className="w-full rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className={`w-full rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${
+              !calculusExist ? 'cursor-not-allowed' : ''
+            }`}
             disabled={!calculusExist}
           >
             Submit
