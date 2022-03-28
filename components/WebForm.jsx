@@ -18,7 +18,6 @@ export default function WebForm({ notify }) {
     }
     return false
   }
-  console.log(HOST)
   const handleChoiceA = (event) => {
     setChoiceA((currentVal) => event.target.value)
   }
