@@ -1,13 +1,15 @@
-# Q3 - Webform
+# Q3 - Webform -  [Deployed Here](https://q3-webform-63x9zok58-hangczz.vercel.app/)
 
 # Techstack Used:
 
-- NextJs
-- NextJS API Route - for backend
-- MongoDB
-- TailwindCSS
+- ReactJS / NextJs - frontend
+- NextJS API Route - backend
+- MongoDB - database 
+- TailwindCSS - functional css 
 
-# Directories / Files Explannation
+# Core Directories / Files Explannation
 
-- `componnents` contains the WebForm component
-- `page/api/choice/index.js` contains the core logic for backend
+- `/componnents` contains the main WebForm component
+- `/page/api/choice/index.js` contains the core logic for backend
+- `/models/Choices.js` contains the form model
+- `/lib/` contains utility functions for database connection and middleware 
