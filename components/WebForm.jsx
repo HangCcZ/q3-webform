@@ -22,7 +22,7 @@ export default function WebForm({ notify }) {
   const clearFields = () => {
     setChoiceA('')
     setChoiceB('')
-    setChoiceB('')
+    setChoiceC('')
   }
 
   const handleChoiceA = (event) => {
