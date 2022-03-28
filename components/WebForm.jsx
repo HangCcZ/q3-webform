@@ -48,7 +48,7 @@ export default function WebForm({ notify }) {
         notify(response.data.message, 'success')
       }
     } catch (error) {
-      notify(response.data.message, 'error')
+      notify(error, 'error')
     }
   }
 
