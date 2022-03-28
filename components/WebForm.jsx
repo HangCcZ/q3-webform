@@ -41,7 +41,7 @@ export default function WebForm({ notify }) {
     }
 
     try {
-      const response = await axios.post(`${HOST}/api/choices`, formData)
+      const response = await axios.post(`/api/choices`, formData)
       if (response.status === 201) {
         notify(response.data.message, 'success')
       }
