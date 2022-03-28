@@ -18,6 +18,13 @@ export default function WebForm({ notify }) {
     }
     return false
   }
+
+  const clearFields = () => {
+    setChoiceA('')
+    setChoiceB('')
+    setChoiceB('')
+  }
+
   const handleChoiceA = (event) => {
     setChoiceA((currentVal) => event.target.value)
   }
@@ -44,6 +51,7 @@ export default function WebForm({ notify }) {
       const response = await axios.post(`/api/choices`, formData)
       if (response.status === 201) {
         notify(response.data.message, 'success')
+        clearFields()
       }
     } catch (error) {
       notify(error, 'error')
